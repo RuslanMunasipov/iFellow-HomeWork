@@ -52,7 +52,7 @@ public class Sum {
         $x("//div[@class = 'react-datepicker__day react-datepicker__day--023']").click();
         $x("//div[@class = 'subjects-auto-complete__input']//input[@id = 'subjectsInput']").setValue(subjects).pressEnter();
         $x("//label[@for = 'hobbies-checkbox-1']").click();
-        $x("//input[@id = 'uploadPicture']").sendKeys("C:\\Users\\лвыао\\IdeaProjects\\Yandex Test\\src\\test\\123.jpg");
+        $x("//input[@id = 'uploadPicture']").uploadFromClasspath("123.jpg");
         $x("//div[@class = 'col-md-9 col-sm-12']//textarea[@class = 'form-control']").setValue(currentAddress);
         $x("//input[@id = 'react-select-3-input']").setValue(state).pressEnter();
         $x("//input[@id = 'react-select-4-input']").setValue(city).pressEnter();
@@ -74,4 +74,6 @@ public class Sum {
         Assertions.assertEquals($x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//td[.= 'Rajasthan Jaipur']").getText(), assertStateCity, "nashel");
     }
 }
+
+
 
